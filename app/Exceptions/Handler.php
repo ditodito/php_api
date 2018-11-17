@@ -56,12 +56,12 @@ class Handler extends ExceptionHandler
                 'error' => $exception->getMessage(),
                 'status' => 500
             ], 500);
-        } else if ($exception instanceof Exception) {
+        } /*else if ($exception instanceof Exception) {
             return response()->json([
                 'error' => 'Bad request',
                 'status' => 400
             ], 400);
-        }
+        }*/
 
         return parent::render($request, $exception);
     }
